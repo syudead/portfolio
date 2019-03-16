@@ -1,11 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: `./src/app.js`,
+  entry: './src/app.js',
 
-  mode: 'development',
+  mode: process.env.NODE_ENV,
   output: {
-    // path: `${__dirname}/dist`,
+    path: `${__dirname}/docs`,
     filename: 'app.js'
   },
   module: {
@@ -18,6 +18,6 @@ module.exports = {
     ]
   },
   plugins: [
-      new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin(),
   ]
 }
