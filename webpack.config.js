@@ -1,6 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+const htmlOptions = {
+  title: 'portfolio',
+  favicon: 'favicon.ico',
+}
+
 module.exports = {
   // entry: './src/app.js',
 
@@ -30,18 +35,16 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'portfolio',
-    }),
-    new HtmlWebpackPlugin({
-      title: 'portfolio',
+    new HtmlWebpackPlugin(htmlOptions),
+    new HtmlWebpackPlugin(Object.assign({}, htmlOptions, {
       filename: '404.html',
-    }),
+    })),
     new CopyWebpackPlugin([{
       from: 'static/', to: '.',
     }])
   ],
   devServer: {
-    contentBase: ['static']
+    contentBase: ['static'],
+    historyApiFallback: true,
   }
 }
