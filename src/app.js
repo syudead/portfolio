@@ -1,20 +1,23 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { Switch, Route } from 'react-router-dom'
 
+import ListPage from './Pages/ListPage'
+import WorkPage from './Pages/WorkPage'
+import AboutPage from './Pages/AboutPage'
+
+const NotFound = () => (
+  <div>Page NotFound</div>
+)
 
 const App = () => (
-  <div>app</div>
+  <>
+    <Switch>
+      <Route exact path="/" component={ListPage} />
+      <Route exact path="/about" component={AboutPage} />
+      <Route exact path="/work/:id" component={WorkPage} />
+      <Route component={NotFound} />
+    </Switch>
+  </>
 )
 
-
-
-
-
-
-
-const body = document.querySelector('body')
-
-render(
-  <App />,
-  body.insertBefore(document.createElement('div'), body.firstChild)
-)
+export default App

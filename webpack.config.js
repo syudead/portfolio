@@ -1,12 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: './src/app.js',
+  // entry: './src/app.js',
 
   mode: process.env.NODE_ENV,
   output: {
-    path: `${__dirname}/docs`,
-    filename: 'app.js'
+    // filename: 'app.js',
+    path: `${__dirname}/docs`
   },
   module: {
     rules: [
@@ -14,10 +15,33 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.(png)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin(),
-  ]
+    new HtmlWebpackPlugin({
+      title: 'portfolio',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'portfolio',
+      filename: '404.html',
+    }),
+    new CopyWebpackPlugin([{
+      from: 'static/', to: '.',
+    }])
+  ],
+  devServer: {
+    contentBase: ['static']
+  }
 }
