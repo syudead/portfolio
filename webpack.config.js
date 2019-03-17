@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const htmlOptions = {
   title: 'portfolio',
   favicon: 'favicon.ico',
+  meta: {viewport: 'width=device-width, initial-scale=1'},
 }
 
 module.exports = {
