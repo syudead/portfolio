@@ -16,7 +16,9 @@ const theme = createMuiTheme({
     useNextVariants: true,
   },
   palette: {
-    primary: lightBlue,
+    primary: {
+      main: '#bbdefb',
+    },
     secondary: amber,
   },
 })

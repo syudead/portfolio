@@ -11,6 +11,7 @@ import CardActions from '@material-ui/core/CardActions'
 import Button from '@material-ui/core/Button'
 
 import OpenInNewIcon from '@material-ui/icons/OpenInNew'
+import CodeIcon from '@material-ui/icons/Code'
 
 // local
 import DefaultLayout from './DefaultLayout';
@@ -19,13 +20,14 @@ const ListPage = () => (
   <DefaultLayout>
     <div style={{marginLeft: 24, marginRight: 24}}>
       <Grid container spacing={40}>
-        <Item />
+        <Item1 />
+        <Item2 />
       </Grid>
     </div>
   </DefaultLayout>
 )
 
-const Item = () => (
+const Item1 = () => (
   <Grid item sm={6} md={4} lg={3}>
     <Card>
       <CardMedia
@@ -48,7 +50,40 @@ const Item = () => (
       </CardContent>
       <CardActions>
         <Button size="small" color="primary" href="https://each-mediumspringgreen-condor.gigalixirapp.com" target="_blank">
+          Demo
           <OpenInNewIcon />
+        </Button>
+      </CardActions>
+    </Card>
+  </Grid>
+)
+
+const Item2 = () => (
+  <Grid item sm={6} md={4} lg={3}>
+    <Card>
+      <CardMedia
+        style={{paddingTop: '56.25%'}}
+        image="/images/sc2.png"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          portfolio
+        </Typography>
+        <Typography gutterBottom>
+          このサイト。作品集。
+        </Typography>
+        <Typography gutterBottom>
+          spa / github pages / webpack / react.js / react-router v4 / material-ui
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small" color="primary" href="https://portfolio.rainyflow.net/" target="_blank">
+          Site
+          <OpenInNewIcon />
+        </Button>
+        <Button size="small" color="primary" href="https://github.com/syudead/portfolio" target="_blank">
+          Source
+          <CodeIcon />
         </Button>
       </CardActions>
     </Card>
