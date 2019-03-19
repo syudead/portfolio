@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import classnames from 'classnames'
 
 // material ui
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -14,20 +15,36 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew'
 import CodeIcon from '@material-ui/icons/Code'
 
 // local
-import DefaultLayout from './DefaultLayout';
+import DefaultLayout from './DefaultLayout'
+import GithubIcon from '../components/GithubIcon'
 
-const ListPage = () => (
+const styles = (theme) => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  leftIcon: {
+    marginRight: theme.spacing.unit,
+  },
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
+  },
+  iconSmall: {
+    fontSize: 20,
+  },
+})
+
+const ListPage = ({ classes }) => (
   <DefaultLayout>
     <div style={{marginLeft: 24, marginRight: 24}}>
       <Grid container spacing={40}>
-        <Item1 />
-        <Item2 />
+        <Item1 classes={classes} />
+        <Item2 classes={classes} />
       </Grid>
     </div>
   </DefaultLayout>
 )
 
-const Item1 = () => (
+const Item1 = ({ classes }) => (
   <Grid item sm={6} md={4} lg={3}>
     <Card>
       <CardMedia
@@ -50,15 +67,15 @@ const Item1 = () => (
       </CardContent>
       <CardActions>
         <Button size="small" color="primary" href="https://each-mediumspringgreen-condor.gigalixirapp.com" target="_blank">
+          <OpenInNewIcon className={classes.leftIcon} />
           Demo
-          <OpenInNewIcon />
         </Button>
       </CardActions>
     </Card>
   </Grid>
 )
 
-const Item2 = () => (
+const Item2 = ({ classes }) => (
   <Grid item sm={6} md={4} lg={3}>
     <Card>
       <CardMedia
@@ -78,16 +95,16 @@ const Item2 = () => (
       </CardContent>
       <CardActions>
         <Button size="small" color="primary" href="https://portfolio.rainyflow.net/" target="_blank">
+          <OpenInNewIcon className={classes.leftIcon} />
           Site
-          <OpenInNewIcon />
         </Button>
         <Button size="small" color="primary" href="https://github.com/syudead/portfolio" target="_blank">
+          <GithubIcon className={classes.leftIcon} />
           Source
-          <CodeIcon />
         </Button>
       </CardActions>
     </Card>
   </Grid>
 )
 
-export default ListPage
+export default withStyles(styles)(ListPage)
