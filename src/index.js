@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
+import ReactGA from 'react-ga'
 
 // material ui
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
@@ -22,6 +23,9 @@ const theme = createMuiTheme({
     secondary: amber,
   },
 })
+
+// Google Analytics
+ReactGA.initialize('UA-21801943-2')
 
 // render
 const body = document.querySelector('body')

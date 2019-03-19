@@ -1,6 +1,7 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch } from 'react-router-dom'
 
+import Route from './components/Route'
 import ListPage from './Pages/ListPage'
 import WorkPage from './Pages/WorkPage'
 import AboutPage from './Pages/AboutPage'
