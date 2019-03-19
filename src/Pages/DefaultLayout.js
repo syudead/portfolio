@@ -60,12 +60,10 @@ class DefaultLayout extends React.Component {
             </IconButton>
           </div>
           <Divider />
-          <Link to="/about">
-            <ListItem button>
-              <ListItemIcon><AccountIcon /></ListItemIcon>
-              <ListItemText>About</ListItemText>
-            </ListItem>
-          </Link>
+          <ListItem button component={Link} to="/about">
+            <ListItemIcon><AccountIcon /></ListItemIcon>
+            <ListItemText>About</ListItemText>
+          </ListItem>
         </Drawer>
         <main style={{paddingTop: 80}}>{children}</main>
       </>
