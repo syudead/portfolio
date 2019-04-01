@@ -60,7 +60,7 @@ const Item3 = ({ classes }) => (
           オンラインマークダウンメモ帳
         </Typography>
         <Typography gutterBottom>
-          spa / grpahql / graphcool / vue.js / vuex / vue-router / vue-apollo / netlify
+          spa / grpahql / graphcool / vue.js / vuex / vue-router / vue-apollo / vuetify / netlify
         </Typography>
       </CardContent>
       <CardActions>
