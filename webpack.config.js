@@ -1,51 +1,59 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-
-const htmlOptions = {
-  title: 'portfolio',
-  favicon: 'favicon.ico',
-  meta: {viewport: 'width=device-width, initial-scale=1'},
-}
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  // entry: './src/app.js',
-
-  mode: process.env.NODE_ENV,
+  entry: './src/index.tsx',
   output: {
-    // filename: 'app.js',
-    path: `${__dirname}/docs`
+    path: path.resolve(__dirname, 'docs'),
+    filename: 'bundle.js',
+    publicPath: '/',
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
-      },
-      {
-        test: /\.(png|svg)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'ts-loader',
             options: {
-              limit: 8192
-            }
-          }
-        ]
-      }
-    ]
+              transpileOnly: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        type: 'asset/resource',
+      },
+    ],
   },
   plugins: [
-    new HtmlWebpackPlugin(htmlOptions),
-    new HtmlWebpackPlugin(Object.assign({}, htmlOptions, {
-      filename: '404.html',
-    })),
-    new CopyWebpackPlugin([{
-      from: 'static/', to: '.',
-    }])
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public',
+          to: '.',
+        },
+      ],
+    }),
   ],
   devServer: {
-    contentBase: ['static'],
     historyApiFallback: true,
-  }
-}
+    static: {
+      directory: path.join(__dirname, 'docs'),
+    },
+    port: 3000,
+  },
+};
