@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          name: "syude",
+          name: "Noriyuki Tanabe",
         </motion.p>
         <motion.p 
           className="text-xl text-muted-foreground font-mono"

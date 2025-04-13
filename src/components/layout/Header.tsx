@@ -11,7 +11,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-2xl font-bold font-mono">syude.dev</h1>
+            <h1 className="text-2xl font-bold font-mono">Noriyuki Tanabe</h1>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}

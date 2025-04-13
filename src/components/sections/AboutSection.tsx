@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const AboutSection: React.FC = () => {
   const techStack = [
+    { name: "Ruby on Rails", color: "bg-red-500" },
+    { name: "Next.js", color: "bg-orange-500" },
     { name: "TypeScript", color: "bg-blue-500" },
     { name: "React", color: "bg-cyan-500" },
     { name: "Node.js", color: "bg-green-500" },
     { name: "GraphQL", color: "bg-pink-500" },
-    { name: "Elixir", color: "bg-purple-500" },
-    { name: "Vue.js", color: "bg-emerald-500" },
   ];
 
   return (
@@ -44,19 +44,19 @@ const AboutSection: React.FC = () => {
               <div>
                 <h4 className="font-mono mb-2">Frontend</h4>
                 <div className="h-2 bg-border rounded-full">
-                  <div className="h-full bg-primary rounded-full w-3/4"></div>
+                  <div className="h-full bg-primary rounded-full w-2/4"></div>
                 </div>
               </div>
               <div>
                 <h4 className="font-mono mb-2">Backend</h4>
                 <div className="h-2 bg-border rounded-full">
-                  <div className="h-full bg-primary rounded-full w-2/3"></div>
+                  <div className="h-full bg-primary rounded-full w-4/4"></div>
                 </div>
               </div>
               <div>
                 <h4 className="font-mono mb-2">DevOps</h4>
                 <div className="h-2 bg-border rounded-full">
-                  <div className="h-full bg-primary rounded-full w-1/2"></div>
+                  <div className="h-full bg-primary rounded-full w-1/3"></div>
                 </div>
               </div>
             </div>

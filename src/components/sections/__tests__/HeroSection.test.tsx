@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import HeroSection from '../HeroSection';
 
@@ -12,7 +12,7 @@ describe('HeroSection', () => {
 
   it('renders the name', () => {
     render(<HeroSection />);
-    expect(screen.getByText('name: "syude",')).toBeInTheDocument();
+    expect(screen.getByText('name: "Noriyuki Tanabe",')).toBeInTheDocument();
   });
 
   it('renders the role', () => {

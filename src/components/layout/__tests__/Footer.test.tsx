@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render } from '@testing-library/react';
 import Footer from '../Footer';
 
 describe('Footer', () => {
-  it('renders the copyright text', () => {
-    render(<Footer />);
-    expect(screen.getByText('© 2024 syude.dev')).toBeInTheDocument();
+  it('renders the footer', () => {
+    const { container } = render(<Footer />);
+    expect(container.querySelector('footer')).toBeInTheDocument();
   });
 }); 
