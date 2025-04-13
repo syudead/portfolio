@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const ContactSection: React.FC = () => {
   const socialLinks = [
