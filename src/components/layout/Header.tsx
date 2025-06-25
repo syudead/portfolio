@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
@@ -29,4 +29,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header; 
+export default Header;  

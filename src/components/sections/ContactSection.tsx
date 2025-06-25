@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const ContactSection: React.FC = () => {
@@ -48,4 +48,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection; 
+export default ContactSection;  

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const AboutSection: React.FC = () => {
@@ -50,7 +50,7 @@ const AboutSection: React.FC = () => {
               <div>
                 <h4 className="font-mono mb-2">Backend</h4>
                 <div className="h-2 bg-border rounded-full">
-                  <div className="h-full bg-primary rounded-full w-4/4"></div>
+                  <div className="h-full bg-primary rounded-full w-full"></div>
                 </div>
               </div>
               <div>
@@ -67,4 +67,4 @@ const AboutSection: React.FC = () => {
   );
 };
 
-export default AboutSection; 
+export default AboutSection;    
