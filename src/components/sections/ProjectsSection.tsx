@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import ProjectCard from '../ProjectCard';
 
 const ProjectsSection: React.FC = () => {
@@ -42,4 +42,4 @@ const ProjectsSection: React.FC = () => {
   );
 };
 
-export default ProjectsSection; 
+export default ProjectsSection;
