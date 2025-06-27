@@ -16,7 +16,7 @@ This report documents efficiency issues identified in the portfolio codebase tha
 ### 2. Large Unoptimized Images (MEDIUM IMPACT) 📸
 **Issue**: PNG images in `/public/images/` are not optimized:
 - `sc1.png`: 74KB
-- `sc2.png`: 128KB  
+- `sc2.png`: 128KB
 - `sc3.png`: 66KB
 - **Total**: 268KB of image assets
 **Impact**: Slower page load times, increased bandwidth usage.

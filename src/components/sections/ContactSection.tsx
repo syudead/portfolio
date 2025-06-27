@@ -48,4 +48,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;  
+export default ContactSection;

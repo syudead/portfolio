@@ -42,4 +42,4 @@ const ProjectsSection: React.FC = () => {
   );
 };
 
-export default ProjectsSection;  
+export default ProjectsSection;

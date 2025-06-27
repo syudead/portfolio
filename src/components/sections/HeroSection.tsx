@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="text-center relative z-10"
       >
-        <motion.h2 
+        <motion.h2
           className="text-6xl font-bold mb-4 font-mono"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
         >
           <span className="text-primary">const</span> developer = {"{"}
         </motion.h2>
-        <motion.p 
+        <motion.p
           className="text-xl text-muted-foreground font-mono"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
         >
           name: "Noriyuki Tanabe",
         </motion.p>
-        <motion.p 
+        <motion.p
           className="text-xl text-muted-foreground font-mono"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
         >
           role: "Full Stack Developer"
         </motion.p>
-        <motion.h2 
+        <motion.h2
           className="text-6xl font-bold mb-4 font-mono"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,4 +48,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection;  
+export default HeroSection;

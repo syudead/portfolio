@@ -109,4 +109,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   );
 };
 
-export default ProjectCard;  
+export default ProjectCard;
